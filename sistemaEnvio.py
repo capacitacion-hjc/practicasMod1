@@ -1,13 +1,14 @@
+#variables 
 cantidad_productos = int(input("Captura la cantidad de productos por registrar: "))
-
 lista_productos = []
 
 #ciclo para llenar la lista de productos
 for i in range(cantidad_productos):
-    print(f"\nProducto {i + 1}")
+    print("Producto {i + 1}")
 
     nombre_producto = input("Captura nombre del producto:  ")
     caducidadDias = int(input("Captura la caducidad en dias: "))
+    almacenamiento = input("Captura el almacenamiento: ")
 
     #lista de las propiedades del producto
     producto = {
