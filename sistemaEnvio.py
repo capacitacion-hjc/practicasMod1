@@ -4,11 +4,10 @@ lista_productos = []
 
 #ciclo para llenar la lista de productos
 for i in range(cantidad_productos):
-    print("Producto {i + 1}")
+    print(f"Producto {i + 1}")
 
     nombre_producto = input("Captura nombre del producto:  ")
     caducidadDias = int(input("Captura la caducidad en dias: "))
-    almacenamiento = input("Captura el almacenamiento: ")
 
     #lista de las propiedades del producto
     producto = {
@@ -20,7 +19,7 @@ for i in range(cantidad_productos):
     lista_productos.append(producto)
 
 # el metodo sort() ordena listas en python
-lista_productos.sort(producto: producto["caducidad"])
+lista_productos.sort( reverse= False)
 
 # imprime lista de productos
 print("\n..::<< Productos ordenados por caducidad >>::..")
