@@ -4,7 +4,7 @@ lista_productos = []
 
 #ciclo para llenar la lista de productos
 for i in range(cantidad_productos):
-    print(f"Producto {i + 1}")
+    print(f" \nProducto {i + 1}")
 
     nombre_producto = input("Captura nombre del producto:  ")
     caducidadDias = int(input("Captura la caducidad en dias: "))
@@ -19,11 +19,10 @@ for i in range(cantidad_productos):
     lista_productos.append(producto)
 
 # el metodo sort() ordena listas en python
-lista_productos.sort( reverse= False)
+lista_productos.sort(key = lambda producto: producto["caducidad"])
 
 # imprime lista de productos
-print("\n..::<< Productos ordenados por caducidad >>::..")
+print("\n<< PLAN DE ENVÍO PRIORITARIO >>")
 
-for producto in lista_productos:
-    print(f"Producto: {producto['nombre']} | "
-          f"Días para caducar: {producto['caducidad']}")
+for i, producto in enumerate(lista_productos, start=1):
+    print(f"{i}) {producto['nombre']} \t- {producto['caducidad']} días")
